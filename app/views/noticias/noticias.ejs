@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Notícias</title>
+		</head>
+	<body>
+
+		<h1>Notícias</h1>
+		<table>
+			<tr>
+				<td>ID</td>
+				<td>Título</td>
+			</tr>
+			<% for(const elem of noticias) { %>
+				<tr>
+					<td><%= elem.id_noticias %></td>
+					<td><%= elem.titulo %></td>
+				</tr>
+			<% } %>
+		</table>
+	</body>
+</html>

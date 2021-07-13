@@ -8,9 +8,9 @@ module.exports = function(application) {
         //recuperar conexao
         var connection = application.config.dbConnection()
         //recuperar a model
-        var noticiasModel = application.app.models.noticiaModel
+        var noticiasModel = new application.app.models.NoticiasDAO(connection)
         //salvarNoticia
-        noticiasModel.salvarNoticia(noticia, connection, (error, result) => {
+        noticiasModel.salvarNoticia(noticia, (error, result) => {
             if(error)
                 res.send(error)
             else {
